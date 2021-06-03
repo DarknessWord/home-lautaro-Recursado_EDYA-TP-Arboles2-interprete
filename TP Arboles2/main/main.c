@@ -9,8 +9,8 @@ int main(){
   TablaOps tabla = tabla_crear();
   tabla = cargar_operadores_total(tabla);
   //interprete//
-  interprete(tabla);
+  interpretar(tabla);
   //almacena en el arbol//
-  tabla_destruir(tabla); 
+  tabla_destruir(tabla);
   return 0;
 }

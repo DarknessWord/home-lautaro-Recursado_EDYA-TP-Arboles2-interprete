@@ -102,7 +102,7 @@ void imprimir_inorder(BTree arbol){
 		else
 			imprimir_inorder(arbol->left);
 
-		printf("%s", (char*)arbol->dato);
+		printf(" %s ", (char*)arbol->dato);
 		if(!btree_empty(arbol->right)){
 			if(!isnum((char*)(arbol->right->dato))){
 				printf("(");
@@ -114,9 +114,7 @@ void imprimir_inorder(BTree arbol){
 			}
 		}
   }
-  else{
-		imprimir_inorder(arbol->left);
+  else
 		printf("%s", (char*)arbol->dato);
-		imprimir_inorder(arbol->right);
-	}
+
 }

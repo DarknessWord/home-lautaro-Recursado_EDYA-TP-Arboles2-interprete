@@ -9,7 +9,7 @@ struct _BTNodo {
 
 typedef struct _BTNodo *BTree;
 typedef void (*FuncionDestructora)(void* dato);
-
+typedef void (*FuncionVisitanteExtra) (void * dato, void *extra);
 /**
  * Devuelve un arbol vacío.
  */
@@ -50,5 +50,7 @@ int isnum(char* a);
  * Imprime la expresion del arbol recibido.
  */
 void imprimir_inorder(BTree arbol);
+
+BTree inorder_extra(BTree arbol,FuncionVisitanteExtra visit,void * extra);
 
 #endif /* __BTREE_H__ */

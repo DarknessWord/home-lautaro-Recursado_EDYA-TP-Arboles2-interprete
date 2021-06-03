@@ -24,7 +24,7 @@ preparado :
 	make main
 	make clear
 	@echo ------------------------------
-	@echo  Compilación terminada
+	@echo  Compilación terminada con éxito
 	@echo ------------------------------
 
 

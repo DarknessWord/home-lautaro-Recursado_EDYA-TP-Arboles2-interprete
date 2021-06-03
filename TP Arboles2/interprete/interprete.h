@@ -3,10 +3,11 @@
 #include "tablaops.h"
 #include "btree.h"
 #include <stddef.h>
+#define MAXINT 150
 
 typedef struct _arbolalias{
    BTree arbol;
-   char* alias;
+   char alias[MAXINT];
 }_arbolalias;
 typedef _arbolalias * ArbolAlias;
 
@@ -43,6 +44,6 @@ void cargar(GList * lista_arboles, char * alias, char * expresion,
 /**
  * Interpreta los comandos recibidos por consola.
  */
-void interprete(TablaOps tabla);
+void interpretar(TablaOps tabla);
 
 #endif /* __INTERPRETE_H__ */

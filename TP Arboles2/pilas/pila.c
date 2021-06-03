@@ -33,7 +33,7 @@ int pila_es_vacia(Pila pila){
 //Se retorna una copia del elemento que se encuentra en el tope de la pila
 //entrada: pila copia ; salida: dato
 void * pila_tope(Pila pila, Copia c){
-	return c(pila->dato);
+	return pila_es_vacia(pila)?NULL:c(pila->dato);
 }
 
 //pila_apilar: Pila void* -> _
